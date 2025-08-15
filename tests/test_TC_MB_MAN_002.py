@@ -7,9 +7,9 @@ from selenium.webdriver.common.devtools.v136.dom_storage import clear
 
 from utils.screenshot_utils import capture_full_page_screenshot
 from pages.manager_registration_page import ManagerRegistrationPage
-from utils.data_loader import load_booking_test_data
+from utils.data_loader import load_all_test_data
 
-@pytest.mark.parametrize("test_case",load_booking_test_data("../data/data.json"))
+@pytest.mark.parametrize("test_case",load_all_test_data("../data/data.json"))
 def test_tc_mb_man_002(browser_config, test_case):
     logging.info("TC_MB_MAN_002 Started..")
     logging.info(test_case["manager"][1]["TC_MAN_002"]["_comment"])

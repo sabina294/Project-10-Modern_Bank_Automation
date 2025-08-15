@@ -8,9 +8,9 @@ from selenium.webdriver.common.devtools.v136.dom_storage import clear
 # from TestCases.TC_TB_02 import expected_error_message
 from utils.screenshot_utils import capture_full_page_screenshot
 from pages.customer_registration_page import CustomerRegistrationPage
-from utils.data_loader import load_booking_test_data
+from utils.data_loader import load_all_test_data
 
-@pytest.mark.parametrize("test_case",load_booking_test_data("../data/data.json"))
+@pytest.mark.parametrize("test_case",load_all_test_data("../data/data.json"))
 def test_tc_mb_cus_003(browser_config, test_case):
     logging.info("TC_MB_CUS_003 Started..")
     logging.info(test_case["customer"][2]["TC_CUS_003"]["_comment"])
