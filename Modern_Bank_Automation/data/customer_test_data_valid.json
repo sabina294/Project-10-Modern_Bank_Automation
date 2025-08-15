@@ -1,9 +1,0 @@
-[
-  {
-    "customerNameReg": "sabina yeasmin",
-    "customerEmailReg": "sabina.yeasmin.9701@gmail.com",
-    "customerPasswordReg": "123456",
-    "initialDepositReg":"10",
-    "expected_successful_message":  "Customer registered! Please login."
-  }
-]

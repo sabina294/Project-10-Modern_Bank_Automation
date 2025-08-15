@@ -1,16 +1,17 @@
-import pytest
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
 import logging
+import selenium
+from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+import pytest
 
 # setup logging
 logging.basicConfig(
-    filename="logs/TC_ALL_logs.log",
+    filename="logs/TC_All_Logs.log",
     level= logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-@pytest.fixture()
+@pytest.fixture(scope="function")
 def browser_config():
     logging.info("Starting Browser Session...")
     driver = webdriver.Chrome()
@@ -25,6 +26,6 @@ def browser_config():
     logging.info("Script Complete.")
     driver.quit()
     logging.info("End Browser Session...")
-    logging.info("................")
-    logging.info("................")
+    logging.info("...................")
+    logging.info("...................")
 
