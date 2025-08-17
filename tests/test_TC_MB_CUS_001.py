@@ -1,3 +1,7 @@
+
+# pytest --browser=chrome --alluredir=allure_test_report
+#allure serve allure_test_report
+
 import logging
 import pytest
 import time
